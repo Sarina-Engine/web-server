@@ -63,12 +63,32 @@ pub struct ProductSerde {
     pub id: i32,
     pub name: String,
     pub rating: f64,
+    pub emotion: f64,
+    pub satisfaction: f64,
+    pub recommended: f64,
+    pub feeling: f64,
 }
 
 impl From<Product> for ProductSerde {
     fn from(p: Product) -> Self {
-        let Product { id, name, rating } = p;
-        Self { id, name, rating }
+        let Product {
+            id,
+            name,
+            rating,
+            emotion,
+            satisfaction,
+            recommended,
+            feeling,
+        } = p;
+        Self {
+            id,
+            name,
+            rating,
+            emotion,
+            satisfaction,
+            recommended,
+            feeling,
+        }
     }
 }
 
